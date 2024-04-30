@@ -1,17 +1,14 @@
 import logo from "./logo.svg";
-import "./App.css";
-import ThreadList from './threadList'
-import Header from './header'
-
+import styles from "./App.module.css";
+import ThreadList from "./components/threadList/threadList";
+import Header from "./components/header/header";
 
 function App() {
-  
   return (
-    <div className="App">
+    <div className={styles.container}>
       <Header />
-      <section>
-        <ThreadList />
-      </section>
+      <ThreadList />
+      
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import styles from './threadList.module.css'
 
 function ThreadList() {
   const [threads, setThreads] = useState();
@@ -17,11 +18,15 @@ function ThreadList() {
     return <div>loading</div>;
   }
   return (
-    <ul>
-      {threads.map((thread) => (
-        <li key={thread.id}>{thread.title}</li>
-      ))}
-    </ul>
+    <section className={styles.container}>
+      
+      <h1 className={styles.title}>新着スレッド</h1>
+      <ul className={styles.list}>
+        {threads.map((thread) => (
+          <li className={styles.threadTitle} key={thread.id}>{thread.title}</li>
+        ))}
+      </ul>
+    </section>
   );
 }
-export default ThreadList
+export default ThreadList;

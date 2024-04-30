@@ -1,0 +1,55 @@
+.container {
+    /* padding: 1rem; */
+    width: calc(100% - 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: gray; */
+    padding: 1rem;
+    /* min-width: 300px; */
+}
+.title {
+    align-self: start;
+}
+.list {
+    width: 100%;
+    background-color: #f0f0f0;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    /* align-items: center; */
+    /* border: solid 1px black; */
+    flex-wrap: wrap;
+}
+.threadTitle {
+    padding: 10px;
+    width: calc(50% - 2rem);
+    
+}
+.threadTitle:hover {
+    background-color: #999999;
+    animation-name: threadTitleHover;
+    animation-duration: 0.2s;
+    animation-fill-mode:forwards;
+    color: white;
+    /* box-shadow: 0 1px 2px gray; */
+}
+@keyframes threadTitleHover {
+    from{
+        box-shadow: 0 0 gray;
+    }
+    to {
+        box-shadow: 0 1px 2px gray;
+    }
+}
+@media screen and (max-width:800px) {
+    .title{
+        align-self: auto;
+    }
+}
+@media screen and (max-width:500px) {
+    .threadTitle{
+        width: 100%;
+    }
+}
