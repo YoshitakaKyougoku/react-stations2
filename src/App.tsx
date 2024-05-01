@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import styles from "./App.module.css";
 import ThreadList from "./components/threadList/threadList";
 import Header from "./components/header/header";

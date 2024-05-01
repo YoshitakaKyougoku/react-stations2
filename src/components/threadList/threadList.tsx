@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
 import styles from './threadList.module.css'
 
+type Thread = {
+  id: string,
+  title: string
+}
 function ThreadList() {
-  const [threads, setThreads] = useState();
+  const [threads, setThreads] = useState<Thread[]>([]);
   async function fetchThreads() {
     await fetch(
       "https://railway.bulletinboard.techtrain.dev/threads?offset=10"
