@@ -10,4 +10,19 @@
 }
 .home{
     font-size: 20px;
+    /* text-decoration: underline; */
+    /* text-underline-offset: -5px; */
 }
+.backgroundImage {
+    background-image: linear-gradient(#ffffff, #ffffff); /* 単色 */
+    background-size: 0 1px; /* 幅(0=見えない状態) | 高さ(=線の太さ) */
+    background-position: bottom right; /* 右下に配置 */
+    background-repeat: no-repeat;
+    padding-bottom: 5px;
+    transition: background-size 0.3s ease-out;
+  }
+  
+  .textWrapper:hover .backgroundImage {
+    background-size: 100% 1px; /* 幅(100%=文字の長さ) | 高さ(=線の太さ) */
+    background-position: bottom left; /* 左下に配置 */
+  }
