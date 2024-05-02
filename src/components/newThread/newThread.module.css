@@ -1,3 +1,66 @@
-.title {
-  align-self: start;
+.container {
+  /* padding: 1rem; */
+  width: calc(100% - 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: gray; */
+  padding: 1rem;
+  /* min-width: 300px; */
 }
+.inputTitle {
+  display: flex;
+}
+.inputArea {
+    display: flex;
+    flex-direction: column;
+}
+.input {
+    box-shadow: inset -4px -4px 8px #fff, inset 2px 2px 8px rgb(0 0 0 / 24%);
+    border: none;
+}
+.errorMessage {
+    /* display: none; */
+    color: red;
+    font-size: 10px;
+}
+label:has(input:invalid) .errorMessage {
+  /* display: block; */
+  color: red
+}
+.title {
+  /* align-self: start; */
+}
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.buttonNeumorphism {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    /* aspect-ratio: 1; */
+    color: #222;
+    background-color: #efefef;
+    border-radius: 10%;
+    box-shadow: -4px -4px 8px #fff, 4px 4px 8px rgb(0 0 0 / 24%);
+  }
+  
+  @media (any-hover: hover) {
+    .buttonNeumorphism {
+      transition: box-shadow 0.2s;
+    }
+  
+    .buttonNeumorphism:hover {
+      box-shadow: -2px -2px 4px #fff, 2px 2px 4px rgb(0 0 0 / 24%);
+    }
+  
+    .buttonNeumorphism:active {
+      background-color: #ebebeb;
+      box-shadow: inset 4px 4px 8px rgb(0 0 0 / 16%);
+    }
+  }
