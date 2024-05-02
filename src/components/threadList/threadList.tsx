@@ -9,7 +9,7 @@ function ThreadList() {
   const [threads, setThreads] = useState<Thread[]>([]);
   async function fetchThreads() {
     await fetch(
-      "https://railway.bulletinboard.techtrain.dev/threads?offset=10"
+      "https://railway.bulletinboard.techtrain.dev/threads?offset=0"
     ).then(async (res) => {
       const data = await res.json();
       setThreads(data);
